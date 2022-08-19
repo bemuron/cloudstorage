@@ -17,7 +17,6 @@ import java.io.File;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class CloudStorageApplicationTests {
 
