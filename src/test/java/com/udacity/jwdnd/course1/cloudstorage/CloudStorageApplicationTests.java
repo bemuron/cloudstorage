@@ -1,6 +1,7 @@
 package com.udacity.jwdnd.course1.cloudstorage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.assertj.core.api.Fail;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.test.annotation.DirtiesContext;
 
 import java.io.File;
+import java.sql.*;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -136,7 +139,7 @@ class CloudStorageApplicationTests {
 	//testing user signup
 	@Test
 	public void testUserSignUp(){
-		WebDriverWait webDriverWait = new WebDriverWait(driver, 2);
+		WebDriverWait webDriverWait = new WebDriverWait(driver, 3);
 		String username = "tester7";
 		String password = "password";
 		String firstname = "Test6";
@@ -156,7 +159,7 @@ class CloudStorageApplicationTests {
 
 	@Test
 	public void testUserLogin(){
-		WebDriverWait webDriverWait = new WebDriverWait(driver, 2);
+		WebDriverWait webDriverWait = new WebDriverWait(driver, 5);
 
 		String username = "testuser";
 		String password = "password";
