@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 
+/**
+* Handles showing the respective error page to a user
+* */
 @Controller
 public class CustomErrorController implements ErrorController {
 

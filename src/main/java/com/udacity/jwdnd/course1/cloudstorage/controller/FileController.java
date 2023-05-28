@@ -59,7 +59,6 @@ public class FileController {
         fileForm.setFileSize("");
         fileForm.setFileId(0);
 
-        //model.addAttribute("files", this.fileService.getFiles());
         return "home";
     }
 
